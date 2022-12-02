@@ -14,6 +14,8 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(cors());
 
 app.use('/api', require('./api'));
+
+//needed for the browser to correctly get index.html
 app.get('/*', (req, res, next) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
