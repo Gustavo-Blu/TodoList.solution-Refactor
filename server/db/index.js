@@ -1,4 +1,4 @@
-const conn = require('./conn');
+const client = require('./client');
 const Todo = require('./Todo');
 
 const syncAndSeed = async () => {
